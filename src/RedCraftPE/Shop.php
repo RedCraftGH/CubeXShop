@@ -53,6 +53,7 @@ class Shop extends PluginBase implements Listener {
       case "shop":
 
         $this->openShop($sender);
+        return true;
       break;
     }
     return false;
@@ -77,6 +78,7 @@ class Shop extends PluginBase implements Listener {
     $shopHomeInv->setItem(30, Item::get(241, 14, 1)->setCustomName(TextFormat::RED . "Mob Drops"));
     $shopHomeInv->setItem(32, Item::get(241, 5, 1)->setCustomName(TextFormat::GRAY . "Spawners"));
     $shopHomeInv->setItem(34, Item::get(345, 0, 1)->setCustomName(TextFormat::WHITE . "Miscellaneous"));
+    $shopHome->send($player);
   }
   public function shopHomeListener(Player $player, Item $item) {
 
@@ -124,6 +126,7 @@ class Shop extends PluginBase implements Listener {
 
       $shopBlocksInventory->addItem(Item::get($blockID, $blockDamage, $blockCount)->setLore(Array("$" . $blockPrice)));
     }
+    $shopBlocks->send($player);
   }
   public function sendValuable(Player $player) {
 
@@ -143,6 +146,7 @@ class Shop extends PluginBase implements Listener {
 
         $shopValuableInventory->addItem(Item::get($valuableID, $valuableDamage, $valuableCount)->setLore(Array("$" . $valuablePrice)));
       }
+    $shopValuable->send($player);
   }
   public function sendTools(Player $player) {
 
@@ -162,6 +166,7 @@ class Shop extends PluginBase implements Listener {
 
         $shopToolsInventory->addItem(Item::get($toolID, $toolDamage, $toolCount)->setLore(Array("$" . $toolPrice)));
       }
+    $shopTools->send($player);
   }
   public function sendFarming(Player $player) {
 
@@ -181,6 +186,7 @@ class Shop extends PluginBase implements Listener {
 
         $shopFarmingInventory->addItem(Item::get($farmID, $farmDamage, $farmCount)->setLore(Array("$" . $farmPrice)));
       }
+    $shopFarming->send($player);
   }
   public function sendFood(Player $player) {
 
@@ -200,6 +206,7 @@ class Shop extends PluginBase implements Listener {
 
         $shopFoodInventory->addItem(Item::get($foodID, $foodDamage, $foodCount)->setLore(Array("$" . $foodPrice)));
       }
+    $shopFood->send($player);
   }
   public function sendDrops(Player $player) {
 
@@ -219,6 +226,7 @@ class Shop extends PluginBase implements Listener {
 
         $shopDropsInventory->addItem(Item::get($dropID, $dropDamage, $dropCount)->setLore(Array("$" . $dropPrice)));
       }
+    $shopDrops->send($player);
   }
   public function sendSpawners(Player $player) {
 
@@ -238,6 +246,7 @@ class Shop extends PluginBase implements Listener {
 
         $shopSpawnersInventory->addItem(Item::get($spawnerID, $spawnerDamage, $spawnerCount)->setLore(Array("$" . $spawnerPrice)));
       }
+    $shopSpawners->send($player);
   }
   public function sendMisc(Player $player) {
 
@@ -257,6 +266,7 @@ class Shop extends PluginBase implements Listener {
 
         $shopMiscInventory->addItem(Item::get($miscID, $miscDamage, $miscCount)->setLore(Array("$" . $miscPrice)));
       }
+    $shopMisc->send($player);
   }
   public function blocksListener(Player $player, Item $item) {
 
