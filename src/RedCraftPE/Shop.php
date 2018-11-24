@@ -45,6 +45,9 @@ class Shop extends PluginBase implements Listener {
 
     $this->getServer()->getPluginManager()->registerEvents($this, $this);
     //Other things below here if needed...prolly not:
+    if(!InvMenuHandler::isRegistered()){
+			InvMenuHandler::register($this);
+		}
   }
   public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
 
