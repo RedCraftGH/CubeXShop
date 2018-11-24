@@ -126,6 +126,9 @@ class Shop extends PluginBase implements Listener {
 
       $shopBlocksInventory->addItem(Item::get($blockID, $blockDamage, $blockCount)->setLore(Array("$" . $blockPrice)));
     }
+    $shopBlocksInventory->setItem(48, Item::get(241, 5, 1)->setCustomName(TextFormat::RED . "Back"));
+    $shopBlocksInventory->setItem(49, Item::get(345, 0, 1)->setCustomName(TextFormat::GRAY . "Home"));
+    $shopBlocksInventory->setItem(50, Item::get(241, 14, 1)->setCustomName(TextFormat::GREEN . "Next"));
     $shopBlocks->send($player);
   }
   public function sendValuable(Player $player) {
@@ -146,6 +149,9 @@ class Shop extends PluginBase implements Listener {
 
         $shopValuableInventory->addItem(Item::get($valuableID, $valuableDamage, $valuableCount)->setLore(Array("$" . $valuablePrice)));
       }
+    $shopValuableInventory->setItem(48, Item::get(241, 5, 1)->setCustomName(TextFormat::RED . "Back"));
+    $shopValuableInventory->setItem(49, Item::get(345, 0, 1)->setCustomName(TextFormat::GRAY . "Home"));
+    $shopValuableInventory->setItem(50, Item::get(241, 14, 1)->setCustomName(TextFormat::GREEN . "Next"));
     $shopValuable->send($player);
   }
   public function sendTools(Player $player) {
@@ -166,6 +172,9 @@ class Shop extends PluginBase implements Listener {
 
         $shopToolsInventory->addItem(Item::get($toolID, $toolDamage, $toolCount)->setLore(Array("$" . $toolPrice)));
       }
+    $shopToolsInventory->setItem(48, Item::get(241, 5, 1)->setCustomName(TextFormat::RED . "Back"));
+    $shopToolsInventory->setItem(49, Item::get(345, 0, 1)->setCustomName(TextFormat::GRAY . "Home"));
+    $shopToolsInventory->setItem(50, Item::get(241, 14, 1)->setCustomName(TextFormat::GREEN . "Next"));
     $shopTools->send($player);
   }
   public function sendFarming(Player $player) {
@@ -186,6 +195,9 @@ class Shop extends PluginBase implements Listener {
 
         $shopFarmingInventory->addItem(Item::get($farmID, $farmDamage, $farmCount)->setLore(Array("$" . $farmPrice)));
       }
+    $shopFarmingInventory->setItem(48, Item::get(241, 5, 1)->setCustomName(TextFormat::RED . "Back"));
+    $shopFarmingInventory->setItem(49, Item::get(345, 0, 1)->setCustomName(TextFormat::GRAY . "Home"));
+    $shopFarmingInventory->setItem(50, Item::get(241, 14, 1)->setCustomName(TextFormat::GREEN . "Next"));
     $shopFarming->send($player);
   }
   public function sendFood(Player $player) {
@@ -206,6 +218,9 @@ class Shop extends PluginBase implements Listener {
 
         $shopFoodInventory->addItem(Item::get($foodID, $foodDamage, $foodCount)->setLore(Array("$" . $foodPrice)));
       }
+    $shopFoodInventory->setItem(48, Item::get(241, 5, 1)->setCustomName(TextFormat::RED . "Back"));
+    $shopFoodInventory->setItem(49, Item::get(345, 0, 1)->setCustomName(TextFormat::GRAY . "Home"));
+    $shopFoodInventory->setItem(50, Item::get(241, 14, 1)->setCustomName(TextFormat::GREEN . "Next"));
     $shopFood->send($player);
   }
   public function sendDrops(Player $player) {
@@ -226,6 +241,9 @@ class Shop extends PluginBase implements Listener {
 
         $shopDropsInventory->addItem(Item::get($dropID, $dropDamage, $dropCount)->setLore(Array("$" . $dropPrice)));
       }
+    $shopDropsInventory->setItem(48, Item::get(241, 5, 1)->setCustomName(TextFormat::RED . "Back"));
+    $shopDropsInventory->setItem(49, Item::get(345, 0, 1)->setCustomName(TextFormat::GRAY . "Home"));
+    $shopDropsInventory->setItem(50, Item::get(241, 14, 1)->setCustomName(TextFormat::GREEN . "Next"));
     $shopDrops->send($player);
   }
   public function sendSpawners(Player $player) {
@@ -246,6 +264,9 @@ class Shop extends PluginBase implements Listener {
 
         $shopSpawnersInventory->addItem(Item::get($spawnerID, $spawnerDamage, $spawnerCount)->setLore(Array("$" . $spawnerPrice)));
       }
+    $shopSpawnersInventory->setItem(48, Item::get(241, 5, 1)->setCustomName(TextFormat::RED . "Back"));
+    $shopSpawnersInventory->setItem(49, Item::get(345, 0, 1)->setCustomName(TextFormat::GRAY . "Home"));
+    $shopSpawnersInventory->setItem(50, Item::get(241, 14, 1)->setCustomName(TextFormat::GREEN . "Next"));
     $shopSpawners->send($player);
   }
   public function sendMisc(Player $player) {
@@ -266,6 +287,9 @@ class Shop extends PluginBase implements Listener {
 
         $shopMiscInventory->addItem(Item::get($miscID, $miscDamage, $miscCount)->setLore(Array("$" . $miscPrice)));
       }
+    $shopMiscInventory->setItem(48, Item::get(241, 5, 1)->setCustomName(TextFormat::RED . "Back"));
+    $shopMiscInventory->setItem(49, Item::get(345, 0, 1)->setCustomName(TextFormat::GRAY . "Home"));
+    $shopMiscInventory->setItem(50, Item::get(241, 14, 1)->setCustomName(TextFormat::GREEN . "Next"));
     $shopMisc->send($player);
   }
   public function blocksListener(Player $player, Item $item) {
